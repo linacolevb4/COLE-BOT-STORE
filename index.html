@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Colebot Store — Sniper smart trading bots</title>
+  <meta name="description" content="Colebot Store - Sniper smart trading bots (Binary & Forex). Contact via WhatsApp or Email." />
+  <style>
+    /* Simple mobile-first styling */
+    :root{--bg:#f6f7fb;--card:#fff;--muted:#6b7280;--accent:#0f172a;--green:#06a84f}
+    body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;background:var(--bg);color:var(--accent)}
+    .container{max-width:980px;margin:28px auto;padding:16px}
+    header{text-align:center;margin-bottom:18px}
+    h1{font-size:28px;margin:6px 0}
+    p.lead{color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:18px}
+    @media(min-width:760px){.grid{grid-template-columns:repeat(2,1fr)}}
+    .card{background:var(--card);border-radius:14px;padding:16px;box-shadow:0 6px 18px rgba(12,17,23,0.06)}
+    .price{font-size:22px;font-weight:700;margin-top:4px}
+    ul.features{padding-left:18px;color:var(--muted);margin-top:8px}
+    .actions{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{padding:10px 14px;border-radius:999px;border:0;cursor:pointer}
+    .btn-primary{background:#0f172a;color:#fff}
+    .btn-outline{background:transparent;border:1px solid #e6e9ef;color:var(--accent)}
+    .contact-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .muted{color:var(--muted)}
+    footer{margin-top:22px;text-align:center;color:var(--muted);font-size:13px}
+    a.link{color:inherit;text-decoration:underline}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Colebot Store</h1>
+      <p class="lead">Sniper smart trading bots</p>
+    </header>
+
+    <main>
+      <section class="grid">
+        <!-- Product 1 -->
+        <article class="card">
+          <h3>Binary signal bot</h3>
+          <div class="price">$10</div>
+          <ul class="features">
+            <li>Binary signal engine</li>
+            <li>Mobile-ready APK</li>
+            <li>Basic install guide</li>
+          </ul>
+          <div class="actions">
+            <button class="btn btn-primary" onclick="buy('Binary signal bot','$10')">Buy on WhatsApp</button>
+            <a class="btn btn-outline" href="#demo-binary">View Demo</a>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="card">
+          <h3>Binary premium signal bot</h3>
+          <div class="price">$25</div>
+          <ul class="features">
+            <li>Advanced confirmation</li>
+            <li>Priority support</li>
+            <li>APK + docs</li>
+          </ul>
+          <div class="actions">
+            <button class="btn btn-primary" onclick="buy('Binary premium signal bot','$25')">Buy on WhatsApp</button>
+            <a class="btn btn-outline" href="#demo-binary-premium">View Demo</a>
+          </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="card">
+          <h3>Forex signal bot</h3>
+          <div class="price">$15</div>
+          <ul class="features">
+            <li>RSI/EMA/MACD signals</li>
+            <li>Entry / SL / TP</li>
+            <li>Install guide</li>
+          </ul>
+          <div class="actions">
+            <button class="btn btn-primary" onclick="buy('Forex signal bot','$15')">Buy on WhatsApp</button>
+            <a class="btn btn-outline" href="#demo-forex">View Demo</a>
+          </div>
+        </article>
+
+        <!-- Product 4 -->
+        <article class="card">
+          <h3>Smart FX pro</h3>
+          <div class="price">$30</div>
+          <ul class="features">
+            <li>Multi-pair support</li>
+            <li>Suggested lot sizing</li>
+            <li>1-month support</li>
+          </ul>
+          <div class="actions">
+            <button class="btn btn-primary" onclick="buy('Smart FX pro','$30')">Buy on WhatsApp</button>
+            <a class="btn btn-outline" href="#demo-smartfx">View Demo</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="card" style="margin-top:14px">
+        <h3>Contact & Orders</h3>
+        <p class="muted">To buy any bot, press the Buy on WhatsApp button or message us directly.</p>
+        <div class="contact-row" style="margin-top:8px">
+          <a class="btn" style="background:#25D366;color:#fff;border-radius:12px" id="waButton" href="#" target="_blank">Message on WhatsApp</a>
+          <a class="btn" style="border:1px solid #ddd" href="mailto:linaparis4@gmail.com">Email Us</a>
+        </div>
+
+        <h4 style="margin-top:12px">How payments & delivery work</h4>
+        <ol class="muted" style="margin-left:18px">
+          <li>Send payment via Mobile Money (MTN/Airtel) or PayPal as instructed after you message us.</li>
+          <li>After confirming payment, we will send you the APK download link or guide via WhatsApp or email.</li>
+          <li>For custom installations we offer a paid setup service.</li>
+        </ol>
+
+        <h4 style="margin-top:12px">Disclaimer</h4>
+        <p class="muted">No guaranteed profits. Use trading bots at your own risk. We provide support for installation only unless otherwise agreed.</p>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Colebot Store — Contact: <a class="link" href="mailto:linaparis4@gmail.com">linaparis4@gmail.com</a>
+    </footer>
+  </div>
+
+  <script>
+    // Fill year and set whatsapp link
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const phone = '256740379814';
+    const waBase = 'https://wa.me/' + phone + '?text=';
+    function buy(product, price) {
+      const msg = encodeURIComponent(product + ' - ' + price + '\\nI want to buy this.');
+      window.open(waBase + msg, '_blank');
+    }
+    // main WhatsApp button open message
+    document.getElementById('waButton').href = waBase + encodeURIComponent('Hello Colebot Store - I want to enquire about your bots.');
+  </script>
+</body>
+  </html>
